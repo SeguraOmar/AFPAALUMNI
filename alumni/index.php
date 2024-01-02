@@ -11,24 +11,36 @@
 <?php include './components/navbar.php'; ?> 
 
 
-<div id="myConteneur" class="d-flex container align-items-center justify-content-center p-4 mt-5 border rounded">
-    <div>
-        <input id="firstInput" type="search" placeholder="Rechercher une formation, un métier, un mot clé...">
-        <button id="bouton">Rechercher</button>
+
+
+<div class="container mt-4">
+    <div class="row">
+        <?php
+        include 'assets/data/data.php';
+
+        foreach ($data as $personne) {
+            echo "<div class='col-md-4 mb-4'>";
+            echo "<div class='card'>";
+            echo "<img src='assets/img/{$personne['image']}' class='card-img-top' alt='{$personne['name']}'>";
+            echo "<div class='card-body'>";
+            echo "<h5 class='card-title'>{$personne['name']}</h5>";
+            echo "<p class='card-text'><strong>Téléphone:</strong> {$personne['phone']}</p>";
+            echo "<p class='card-text'><strong>Email:</strong> {$personne['email']}</p>";
+            echo "<p class='card-text'><strong>Région:</strong> {$personne['region']}</p>";
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";
+        }
+        ?>
     </div>
-
-    <button id="boutonformation">Afficher toutes nos formations</button>
 </div>
-
-
- 
-
-
 
 
 
 
 <?php include './components/footer.php'; ?> 
     
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-eS5k+dvQQBO3OFL5HlyFl/3ERWCD3IwUQerWYAAe1zVo6z9LQ+8YMyaSEbMOWw"
+    crossorigin="anonymous"></script>
 </body>
 </html> 

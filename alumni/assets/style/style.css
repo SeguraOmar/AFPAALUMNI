@@ -88,27 +88,20 @@ body {
     flex-direction: column;
 }
 
-#firstInput {
-    border-radius: 0.5rem;
-    padding: 0.7rem;
-    border :none;
-    width: 65rem;
+
+
+
+.card {
+    background-color: #ffccd4; 
+    border: 1px solid #d9534f; 
+    margin-bottom: 20px; 
+    border-radius: 10px; 
 }
 
-#bouton {
-    border: none;
-    border-radius: 0.2rem;
-    padding: 0.5rem;
-    background-color: #4CAF50;
-    color:white;
+.card-title {
+    color: #5cb85c; 
 }
 
-#boutonformation {
-    border: none;
-    background-color: #4CAF50;
-    color: white;
-    padding:  0.7rem;
-    border-radius: 0.2rem;
-    margin-top: 1.2rem;
+.card-text {
+    color: #333; 
 }
-
